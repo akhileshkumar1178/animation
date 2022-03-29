@@ -1,0 +1,64 @@
+<html>
+<head>
+<style>
+*{
+box-sizing:border-box;
+margin:0px;
+padding:0px;
+}
+body
+{
+width:100%;
+height:auto;
+background:#e8e8ff;
+position:releative;
+}
+
+/* The element to apply the animation to */
+#box
+{
+height:400px;
+width:400px;
+background:pink;
+position:absolute;
+left:550px;
+top:180px;
+animation-name:akhil;
+animation-duration:3s;
+animation-delay:3s;
+animation-iteration-count: infinite;   /*(Two value[2s,infinite]) how maney time run */
+animation-direction:alternate-reverse; /*(Normal,reverse,alternate,reverse-alternate)*/
+
+}
+
+/* The animation code */
+@keyframes akhil
+{
+0%   {background-color: pink;}
+25%  {background-color: yellow;}
+50%  {background-color: blue;}
+100% {background-color: green;}
+}
+#div1{height:50px;width:50px;background:red;animation-duration:5s;animation-name:mymove;animation-timing-function:esae;}
+#div2{height:50px;width:50px;background:red;animation-duration:5s;animation-name:mymove;animation-timing-function:esae in;}
+#div3{height:50px;width:50px;background:red;animaton-duration:5s;animation-name:mymove;animation-timing-function:esae out;}
+#div4{height:50px;width:50px;background:red;animaton-duration:5s;animation-name:mymove;animation-timing-function:esae in out;}
+#div5{height:50px;width:50px;background:red;animaton-duration:5s;animation-name:mymove;animation-timing-function:linear;}
+@keyframes mymove
+{
+from{height:50px;width:50px;background:red;}
+to{height:50px;width:400px;background:yellow;}
+}
+</style>
+<head>
+<body>
+<div id="box"></div>
+
+<div id="div1">linear</div>
+<div id="div2">ease</div>
+<div id="div3">ease-in</div>
+<div id="div4">ease-out</div>
+<div id="div5">ease-in-out</div>
+
+</body>
+</html>
